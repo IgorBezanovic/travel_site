@@ -1,0 +1,398 @@
+@import 'mixinsIgorica';
+@import 'varsIgorica';
+
+@include main;
+*{
+    font-family: $fonts;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    nav{
+        background-color: $tamno_tirkizna;
+        width: 100%;
+        .nav_traka{
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 40px;
+            height: 4em;
+            .left{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 10em;
+                color: $bela;
+                .moto{
+                    display: none;
+                }
+            }
+            .links{
+                display: none;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                margin-top: 4em;
+                ul{
+                    list-style: none;
+                    background-color: $tamno_tirkizna;
+                    li{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 3em;
+                        width: 20em;
+                        text-transform: uppercase;
+                        a{
+                            text-decoration: none;
+                            color: $bela;
+                        }
+                        &:hover{
+                            background-color: $hover_tirkizna;
+                            padding: 0 50px;
+                        }
+                    }
+                }
+            }
+            .right{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 9em;
+                .menu{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $bela;
+                    font-weight: bold;
+                    padding: 5px;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+                .search{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: $bela;
+                    width: 5em;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+.hero{
+    padding: 0 40px;
+    margin-top: 4em;
+    .title{
+        text-align: center;
+        margin-top: 3em;
+        text-transform: uppercase;
+        color: $tamno_tirkizna;
+        font-size: 3em;
+    }
+    .hero_desc{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        margin-top: 4em;
+        .hero_text{
+            width:100%;
+            .text{
+                text-align: center;
+                h2{
+                  color: $tamno_tirkizna;
+                  font-weight: bold;
+                }
+                p, h2{
+                    margin-top: 2em;
+                }
+            }
+        }
+        .hero_img{
+            display: none;
+        }
+    }
+}
+.section_two{
+    background-image: url(../images/Image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 140px 40px;
+    .title_sec_two{
+        text-align: center;
+        padding-top: 4em ;
+        text-transform: uppercase;
+        color: $bela;
+        font-size: 3em;
+    }
+    .offer{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 2em;
+        .box{
+            padding: 15px;
+            background-color: $bela;
+            width: 18em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: 1em;
+            height: 20em;
+            text-align: center;
+        }
+        
+        h3{
+            text-transform: uppercase;
+            color: $tamno_tirkizna;
+        }
+        h3, p{
+            margin-top: 1.5em;
+        }
+    }
+}
+.section_three{
+    padding: 0px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .title_sec_three{
+        text-align: center;
+        text-transform: uppercase;
+        color: $tamno_tirkizna;
+        font-size: 3em;
+    }
+    .tours{
+        width: 100%;
+        display: none;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 3em;
+        .tipe_tour{
+            width: 18em;
+            text-align: center;
+            box-shadow: 0px 10px 10px rgb(184, 184, 184);
+            margin: 1em;
+            img{
+                width: 18em;
+                -webkit-clip-path: polygon(0 0, 0 100%, 100% 160px, 100% 0);
+                clip-path: polygon(0 0, 0 100%, 100% 160px, 100% 0);
+            }
+            h3{
+                height: 2em;
+                margin-top: 1em;
+                margin-bottom: 1em;
+                text-transform: uppercase;
+                color: $tamno_tirkizna;
+            }
+            .desc{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                p{
+                    border-bottom: 1px solid rgb(192, 192, 192);
+                    width: 12em;
+                    height: 2.5em;
+                    line-height: 2.3;
+                }
+                p:nth-child(5){
+                    border: none;
+                }
+            }
+        }
+        .tipe_tour:nth-child(2){
+            color: $bela;
+            background-color: $tamno_tirkizna;
+            h3{
+                color: $bela;
+            }
+        }
+    }
+    .discover{
+        margin-top: 3em;
+        margin-bottom: 3em;
+        text-transform: uppercase;
+        text-align: center;
+        border: none;
+        border-radius: 50px;
+        padding: 20px 30px;
+        background-image: linear-gradient(to right, $tamno_tirkizna , $for_btn);
+        color: $bela;
+        cursor: pointer;
+    }
+}
+.footer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30em;
+    padding: 0px 40px;
+    background-color: $tamno_tirkizna;
+    .footer_text{
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 6em;
+        color: $bela;
+        font-weight: bold;
+    }
+    .social{
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 6em;
+        .social_bkg{
+            background-color: $background_social;
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                height: auto;
+            }
+        }
+    }
+    .copyright{
+        position: absolute;
+        bottom: 0;
+        left: 0px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: 4em;
+        background-color: $background_footer;
+        .left_footer{
+            padding-left: 40px;
+            width: 13em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            p{
+               color: $bela;
+            }
+        }
+        .right_footer{
+            padding-right: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $bela;
+        }
+    }
+}
+
+@media screen and (min-width: 600px){
+    .hero{
+        .hero_desc{
+            .hero_img{
+                display: block;
+            }
+        }
+    }
+    
+}
+@media screen and (min-width: 720px){
+    .section_two{
+        .title_sec_two{
+            padding-top: 2em;
+
+        }
+    }
+}
+
+@media screen and (min-width: 1200px){
+    header{
+        nav{
+            .nav_traka{
+                .left{
+                    .moto{
+                        display: block;
+                    }
+                }
+                .links{
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: 0;
+                    ul{
+                        display: flex;
+                        justify-content: space-around;
+                        li{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: row;
+                            height: 3em;
+                            width: auto;
+                            margin-left: 15px;
+                            text-transform: uppercase;
+                            a{
+                                text-decoration: none;
+                                color: $bela;
+                            }
+                            &:hover{
+                                padding: 15px;
+                            }
+                        }
+                    }
+                }
+                .right{
+                    justify-content: flex-end;
+                    .menu{
+                        display: none;
+                    }
+
+                }
+            }
+        }
+    }
+    .hero{
+        .hero_desc{
+            flex-direction: row;
+            justify-content: space-between;
+            .hero_text{
+                width:37em;
+                .text{
+                    text-align: left;
+                    h2{
+                      margin-top: 1em;
+                    }
+                    p, .second{
+                        margin-top: 1em;
+                    }
+                }
+            }
+            .hero_img{
+                width: 50%;
+                img{
+                    width: 100%; 
+                }
+            }
+        }
+    }
+    .section_two{
+        height: 70em;
+    }
+    .section_three{
+        .tours{
+            display: flex;
+            margin-bottom: 3em;
+        }
+        .discover{
+            display: none;
+        }
+    }
+}
